@@ -1,103 +1,80 @@
-body  {
-    background-image: url("https://mocah.org/uploads/posts/5341310-water-nature-sea-ocean-outdoors-sea-waves-general-luna-cloud-9-tower-philippines-surfing-drone-shot-siargao-island-siargao-beach-scenery-tsunami-aerial-view-landscape-sports-sport-free-picture.jpg");
-    background-size: cover;
-    
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(28, 181, 224, 0.8),
+      rgba(0, 8, 81, 0.8)
+    ),
+    url("/assets/ryan-pernofski-lLbjntkOzC4-unsplash\ \(1\).jpg");
+  background-size: cover;
+  background-position: top;
+  /* clip-path: polygon(0 0, 100% 0%, 67% 100%, 0% 100%); */
+  position: relative;
+}
+
+.text-box {
+  position: absolute;
+  /* background-color: red; */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  text-transform: uppercase;
+  /* margin-bottom: 60px; */
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  letter-spacing: 25px;
+  animation: moveInLeft 1s ease-out;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 15px;
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
 
-.navbar {
-    background-image: url("https://mocah.org/uploads/posts/5341310-water-nature-sea-ocean-outdoors-sea-waves-general-luna-cloud-9-tower-philippines-surfing-drone-shot-siargao-island-siargao-beach-scenery-tsunami-aerial-view-landscape-sports-sport-free-picture.jpg");
-    background-size: cover;
-}
-  
-#app-name {
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
-.nav-link {
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-}
-
-.card-body {
-    background-color: white
-}
-
-#map {
-    margin: auto;
-    width: 75%;
-    height: 400px;
-    background-color: grey;
-}
-
-.dropbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-    
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-    
-/* Links inside the dropdown */
-.dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-    
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-      display: block;
-    }
-    
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-      background-color: #3e8e41;
-    }
-  
-.card-subtitle {
-    font-size: medium;
-}
-
-.results {
-  overflow: scroll;
-  height: 500px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-#results{
-  background-color: white;
-}
-
-.title-text {
-    font-weight: bold;
-    font-size: larger;
-}
-
-h3 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
